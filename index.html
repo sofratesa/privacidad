@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Política de privacidad de la aplicación IRIS, la mesa de ayuda interna del Departamento de TI de Sofratesa.">
+<!-- BORRADOR: mientras el documento no sea definitivo se pide a los buscadores
+     que no lo indexen. QUITAR esta línea al publicar la versión final. -->
+<meta name="robots" content="noindex">
+<title>Política de privacidad de IRIS</title>
+<style>
+  /* Reset mínimo: el anfitrión de artifacts lo aportaba, aquí no. */
+  html { -webkit-text-size-adjust: 100%; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+  /* Tokens tomados de lib/core/design/editorial_tokens.dart — la misma paleta
+     que usa la app, para que el documento se lea como parte de IRIS. */
+  :root {
+    --paper: #FAF9F6;
+    --paper-raised: #FFFFFF;
+    --paper-sunken: #F2F0EA;
+    --ink: #14161A;
+    --ink-muted: #5C6169;
+    --ink-faint: #8E939B;
+    --rule: #E2DFD8;
+    --accent: #1F3A5F;
+    --on-accent: #FAF9F6;
+    --pend-fg: #8A5B00;
+    --pend-bg: #FBF0DC;
+    --ok-fg: #1F6B4A;
+    --ok-bg: #E4F1EA;
+    --sombra: none;
+
+    --hairline: 1px;
+    --rule-accent: 2px;
+    --lectura: 780px;
+
+    --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px;
+    --s5: 20px; --s6: 24px; --s7: 32px; --s8: 40px;
+    --s9: 56px; --s10: 72px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1E2128;
+      --paper-raised: #262A34;
+      --paper-sunken: #17191F;
+      --ink: #F2F4F8;
+      --ink-muted: #9EA6B4;
+      --ink-faint: #707886;
+      --rule: #313642;
+      --accent: #93B4D8;
+      --on-accent: #1E2128;
+      --pend-fg: #E0B25C;
+      --pend-bg: #2F2718;
+      --ok-fg: #6FC49A;
+      --ok-bg: #1B2E24;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #1E2128;
+    --paper-raised: #262A34;
+    --paper-sunken: #17191F;
+    --ink: #F2F4F8;
+    --ink-muted: #9EA6B4;
+    --ink-faint: #707886;
+    --rule: #313642;
+    --accent: #93B4D8;
+    --on-accent: #1E2128;
+    --pend-fg: #E0B25C;
+    --pend-bg: #2F2718;
+    --ok-fg: #6FC49A;
+    --ok-bg: #1B2E24;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter Tight', Inter, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .envoltura {
+    max-width: var(--lectura);
+    margin: 0 auto;
+    padding: var(--s8) var(--s5) var(--s10);
+  }
+
+  /* --- Cabecera ---------------------------------------------------------- */
+
+  .cabecera { display: flex; flex-direction: column; gap: var(--s4); }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: var(--s2);
+    font-size: 11px; font-weight: 600; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .eyebrow::before {
+    content: ""; width: 18px; height: var(--rule-accent);
+    background: var(--accent); flex: none;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  .entradilla {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--ink-muted);
+    font-size: 17px;
+  }
+
+  /* --- Aviso de borrador ------------------------------------------------- */
+
+  .borrador {
+    margin-top: var(--s7);
+    background: var(--pend-bg);
+    color: var(--pend-fg);
+    border: var(--hairline) solid currentColor;
+    border-left-width: var(--rule-accent);
+    padding: var(--s4) var(--s5);
+    display: flex; flex-direction: column; gap: var(--s2);
+  }
+  .borrador strong {
+    font-size: 11px; letter-spacing: .09em; text-transform: uppercase;
+    font-weight: 700;
+  }
+  .borrador p { margin: 0; font-size: 14px; line-height: 1.5; color: inherit; }
+
+  /* --- Ficha del documento ---------------------------------------------- */
+
+  .ficha {
+    margin-top: var(--s7);
+    border-top: var(--hairline) solid var(--rule);
+    border-bottom: var(--hairline) solid var(--rule);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+  .ficha > div {
+    padding: var(--s4) var(--s5) var(--s4) 0;
+    display: flex; flex-direction: column; gap: var(--s1);
+  }
+  .ficha dt, .etiqueta {
+    font-size: 10.5px; font-weight: 600; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  .ficha dd { margin: 0; font-size: 14.5px; font-weight: 500; }
+
+  /* --- Secciones -------------------------------------------------------- */
+
+  section {
+    margin-top: var(--s9);
+    border-top: var(--hairline) solid var(--rule);
+    padding-top: var(--s5);
+  }
+
+  .titular { display: flex; gap: var(--s4); align-items: baseline; }
+  .num {
+    font-size: 13px; font-weight: 700; color: var(--accent);
+    font-variant-numeric: tabular-nums; flex: none;
+    min-width: 2ch;
+  }
+  h2 {
+    margin: 0;
+    font-size: 20px; line-height: 1.3; letter-spacing: -.015em;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  section > *:not(.titular) { margin-left: calc(2ch + var(--s4)); }
+  @media (max-width: 620px) {
+    section > *:not(.titular) { margin-left: 0; }
+  }
+
+  p { max-width: 66ch; }
+  p, ul, ol { color: var(--ink); }
+  section p:first-of-type { margin-top: var(--s4); }
+
+  ul { padding-left: var(--s5); }
+  li { margin-bottom: var(--s2); max-width: 64ch; }
+  li::marker { color: var(--ink-faint); }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible {
+    outline: var(--rule-accent) solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* --- Marcador de dato pendiente --------------------------------------- */
+
+  .pendiente {
+    background: var(--pend-bg);
+    color: var(--pend-fg);
+    border-bottom: var(--rule-accent) solid currentColor;
+    padding: 1px 5px;
+    font-weight: 600;
+    font-size: .95em;
+    white-space: nowrap;
+  }
+
+  /* --- Tabla de datos --------------------------------------------------- */
+
+  .tabla-envoltura { overflow-x: auto; margin-top: var(--s5); }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 14px; min-width: 520px;
+  }
+  caption {
+    text-align: left; color: var(--ink-faint);
+    font-size: 12.5px; padding-bottom: var(--s3);
+  }
+  th {
+    text-align: left; vertical-align: bottom;
+    font-size: 10.5px; font-weight: 600; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--ink-faint);
+    padding: 0 var(--s4) var(--s3) 0;
+    border-bottom: var(--hairline) solid var(--rule);
+  }
+  td {
+    padding: var(--s3) var(--s4) var(--s3) 0;
+    border-bottom: var(--hairline) solid var(--rule);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  td:first-child { font-weight: 600; width: 30%; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* --- Bloque destacado ------------------------------------------------- */
+
+  .nota {
+    margin-top: var(--s5);
+    background: var(--paper-sunken);
+    border-left: var(--rule-accent) solid var(--accent);
+    padding: var(--s4) var(--s5);
+  }
+  .nota p { margin: 0; font-size: 15px; }
+  .nota p + p { margin-top: var(--s3); }
+
+  .destino {
+    display: inline-flex; align-items: baseline; gap: var(--s2);
+    font-size: 12px; color: var(--ink-muted);
+  }
+
+  /* --- Lista de decisiones ---------------------------------------------- */
+
+  .decisiones { list-style: none; padding: 0; margin-top: var(--s4); }
+  .decisiones li {
+    display: flex; gap: var(--s3); align-items: baseline;
+    padding: var(--s3) 0;
+    border-bottom: var(--hairline) solid var(--rule);
+    max-width: none;
+    margin-bottom: 0;
+  }
+  .decisiones li:last-child { border-bottom: none; }
+  .decisiones .quien {
+    font-size: 10.5px; font-weight: 600; letter-spacing: .07em;
+    text-transform: uppercase; color: var(--ink-faint);
+    flex: none; min-width: 8.5ch; padding-top: 3px;
+  }
+
+  /* --- Pie -------------------------------------------------------------- */
+
+  footer {
+    margin-top: var(--s9);
+    border-top: var(--rule-accent) solid var(--accent);
+    padding-top: var(--s4);
+    color: var(--ink-faint);
+    font-size: 12.5px;
+    display: flex; flex-wrap: wrap; gap: var(--s3) var(--s6);
+    justify-content: space-between;
+  }
+</style>
+
+<div class="envoltura">
+
+  <header class="cabecera">
+    <div class="eyebrow">Sofratesa · Departamento de TI</div>
+    <h1>Política de privacidad de IRIS</h1>
+    <p class="entradilla">
+      Cómo la aplicación IRIS trata los datos de las personas que la usan: qué
+      recoge, para qué, con quién los comparte y qué puede solicitar sobre ellos.
+    </p>
+  </header>
+
+  <div class="borrador">
+    <strong>Borrador · pendiente de revisión legal</strong>
+    <p>
+      Este documento es una propuesta redactada por el Departamento de TI a
+      partir del comportamiento real de la aplicación. Los datos marcados
+      <span class="pendiente">así</span> son decisiones que corresponden a la
+      dirección o al área legal de Sofratesa, y hay que completarlos antes de
+      publicar la página. No es un documento vigente.
+    </p>
+  </div>
+
+  <dl class="ficha">
+    <div>
+      <dt>Responsable</dt>
+      <dd><span class="pendiente">Razón social</span></dd>
+    </div>
+    <div>
+      <dt>Aplicación</dt>
+      <dd>IRIS · com.sofratesa.iris</dd>
+    </div>
+    <div>
+      <dt>Versión del documento</dt>
+      <dd>Borrador 1 · <span class="pendiente">fecha</span></dd>
+    </div>
+    <div>
+      <dt>Contacto</dt>
+      <dd><span class="pendiente">correo de datos</span></dd>
+    </div>
+  </dl>
+
+  <section>
+    <div class="titular"><span class="num">01</span><h2>Quién es el responsable</h2></div>
+    <p>
+      El responsable del tratamiento es
+      <span class="pendiente">razón social completa</span>, con domicilio en
+      <span class="pendiente">dirección</span>. Para cualquier asunto
+      relacionado con sus datos personales puede escribir a
+      <span class="pendiente">correo de datos</span>.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">02</span><h2>A quién se aplica</h2></div>
+    <p>
+      IRIS es la mesa de ayuda interna del Departamento de TI. La usan las
+      personas que trabajan en Sofratesa para reportar incidencias y seguir su
+      atención. No está abierta al público: las cuentas las crea un
+      administrador en el sistema de identidad de la empresa, y no existe
+      registro por cuenta propia.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">03</span><h2>Qué datos tratamos</h2></div>
+    <div class="tabla-envoltura">
+      <table>
+        <caption>Todo lo que la aplicación envía a los servidores de Sofratesa.</caption>
+        <thead>
+          <tr><th scope="col">Dato</th><th scope="col">De dónde sale y para qué se usa</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Identidad</td>
+            <td>Nombres y apellidos, correo corporativo, identificador de
+              usuario, departamento y sede. Provienen del sistema de identidad
+              de la empresa al iniciar sesión, e identifican quién reporta cada
+              caso y quién lo atiende.</td>
+          </tr>
+          <tr>
+            <td>Contenido de sus tickets</td>
+            <td>El título y la descripción que escribe, los mensajes del hilo
+              de conversación y la valoración que da a la atención recibida.</td>
+          </tr>
+          <tr>
+            <td>Imágenes que adjuntas</td>
+            <td>Capturas de pantalla y fotos tomadas con la cámara. Solo se
+              envían si decide adjuntarlas.</td>
+          </tr>
+          <tr>
+            <td>Archivos</td>
+            <td>Hojas de cálculo con el histórico de soporte. Únicamente en el
+              panel de administración; no afecta al uso corriente.</td>
+          </tr>
+          <tr>
+            <td>Identificador del dispositivo</td>
+            <td>Un código que asigna el servicio de notificaciones de Google a
+              esta instalación, necesario para avisarle cuando su ticket cambia.</td>
+          </tr>
+          <tr>
+            <td>Registro de auditoría</td>
+            <td>Qué acción se realizó sobre cada ticket —crear, cancelar,
+              eliminar, exportar—, quién la hizo y cuándo.</td>
+          </tr>
+          <tr>
+            <td>Registros técnicos</td>
+            <td>Dirección IP, tipo de dispositivo o navegador, ruta consultada y
+              tiempo de respuesta. Se generan en el servidor con fines de
+              seguridad y diagnóstico.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">04</span><h2>Para qué los usamos</h2></div>
+    <ul>
+      <li><strong>Prestar el servicio de soporte:</strong> registrar tu
+        incidencia, asignarla a un técnico, mantener la conversación y dejar
+        constancia de cómo se resolvió.</li>
+      <li><strong>Gestionar su cuenta</strong> dentro de la aplicación y decidir
+        qué puede ver según su rol.</li>
+      <li><strong>Avisarle</strong> por notificación en el teléfono o por correo
+        cuando algo cambia en uno de sus tickets.</li>
+      <li><strong>Seguridad y trazabilidad:</strong> el registro de auditoría
+        permite saber quién hizo cada cambio, que es lo que hace auditable el
+        servicio.</li>
+      <li><strong>Medir el servicio:</strong> tiempos de respuesta y de
+        resolución del Departamento de TI, siempre sobre el conjunto y no para
+        evaluar a personas concretas.</li>
+    </ul>
+    <div class="nota">
+      <p>
+        <strong>No usamos sus datos para publicidad, no elaboramos perfiles
+        comerciales y no los vendemos ni cedemos a nadie.</strong>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">05</span><h2>Con qué base legal</h2></div>
+    <p>
+      El tratamiento se apoya en <span class="pendiente">base legal a
+      confirmar</span> — previsiblemente la relación laboral y el interés
+      legítimo de la empresa en prestar y auditar el soporte técnico, no en tu
+      consentimiento. Esto significa que no se le pide permiso para cada uso,
+      pero tampoco se pueden usar los datos para fines distintos de los del
+      apartado anterior.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">06</span><h2>Quién más los ve</h2></div>
+    <p>
+      Dentro de Sofratesa, sus tickets los ven el técnico asignado y el personal
+      del Departamento de TI con permiso para ello. Un compañero de otra área no
+      puede abrir un ticket que no sea suyo.
+    </p>
+    <p>
+      Fuera de Sofratesa intervienen tres proveedores, que tratan los datos
+      <strong>por cuenta nuestra y siguiendo nuestras instrucciones</strong>:
+    </p>
+    <ul>
+      <li><strong>Cloudinary</strong> — almacena las imágenes que adjuntas.
+        <span class="destino">Estados Unidos</span></li>
+      <li><strong>Google (Firebase Cloud Messaging)</strong> — entrega las
+        notificaciones a tu teléfono.
+        <span class="destino">Estados Unidos</span></li>
+      <li><strong>Microsoft 365</strong> — envía los correos de aviso.
+        <span class="destino">Estados Unidos</span></li>
+    </ul>
+    <p>
+      Como estos servicios operan fuera de Panamá, sus datos son objeto de
+      <strong>transferencia internacional</strong>. Ninguno de ellos los usa
+      para sus propios fines.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">07</span><h2>Cuánto tiempo los guardamos</h2></div>
+    <ul>
+      <li>Tickets, mensajes y registro de auditoría:
+        <span class="pendiente">plazo</span>.</li>
+      <li>Imágenes adjuntas: <span class="pendiente">plazo</span>.</li>
+      <li>Registros técnicos del servidor: <span class="pendiente">plazo</span>.</li>
+    </ul>
+    <p>
+      Cuando una persona deja de trabajar en Sofratesa, su cuenta se desactiva. Los tickets
+      que abrió se conservan durante el plazo indicado, porque forman parte
+      del historial de servicio del Departamento de TI.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">08</span><h2>Qué puede solicitar</h2></div>
+    <p>
+      Puede solicitar <strong>acceso</strong> a los datos que tenemos sobre usted,
+      su <strong>rectificación</strong> si algo es incorrecto, su
+      <strong>eliminación</strong> y <strong>oponerte</strong> a un uso concreto.
+      Escribe a <span class="pendiente">correo de datos</span> y le
+      responderemos en un plazo de <span class="pendiente">plazo de
+      respuesta</span>.
+    </p>
+    <p>
+      Tenga en cuenta que algunas peticiones tienen límites: el registro de
+      auditoría y los tickets ya cerrados sostienen la trazabilidad del
+      servicio, así que su eliminación puede no ser posible mientras siga
+      corriendo el plazo de conservación.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">09</span><h2>Cómo los protegemos</h2></div>
+    <ul>
+      <li>Toda la comunicación entre la aplicación y los servidores va
+        <strong>cifrada</strong> (HTTPS/TLS). Ningún dato viaja en claro.</li>
+      <li>El acceso está <strong>controlado por permisos</strong>: cada persona
+        ve sus propios tickets, y ver los del resto requiere un permiso que se
+        concede por rol.</li>
+      <li>Las imágenes adjuntas <strong>no son públicas</strong>. Se sirven
+        mediante enlaces firmados que caducan, no por una dirección que se pueda
+        adivinar.</li>
+      <li>La sesión <strong>se cierra sola</strong> tras un rato de inactividad,
+        con un aviso previo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">10</span><h2>Sus datos biométricos no salen del dispositivo</h2></div>
+    <p>
+      Si activa el desbloqueo biométrico, la comprobación la realiza el sistema
+      operativo de su propio dispositivo, con el método que este ofrezca: huella
+      digital, reconocimiento facial u otro. IRIS solo recibe la confirmación de
+      que la comprobación fue correcta o no.
+      <strong>Ni Sofratesa ni ningún proveedor llegan a tener sus datos
+      biométricos</strong>, ni una copia ni una representación de ellos.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">11</span><h2>Menores de edad</h2></div>
+    <p>
+      IRIS es una herramienta de trabajo interna y no está dirigida a menores de
+      edad ni se usa con ellos.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">12</span><h2>Cambios en esta política</h2></div>
+    <p>
+      Si cambia algo relevante —un proveedor nuevo, un dato que antes no se
+      recogía— se actualizará esta página y se avisará por los canales internos
+      habituales. La fecha de la última revisión aparece al principio del
+      documento.
+    </p>
+  </section>
+
+  <section>
+    <div class="titular"><span class="num">13</span><h2>Qué falta por decidir</h2></div>
+    <p>
+      Lo que queda pendiente para poder publicar esta página, y de quién depende:
+    </p>
+    <ul class="decisiones">
+      <li><span class="quien">Legal</span><span>Razón social, domicilio y base
+        legal del tratamiento.</span></li>
+      <li><span class="quien">Dirección</span><span>Plazos de conservación de
+        los tres tipos de datos del apartado 07.</span></li>
+      <li><span class="quien">Dirección</span><span>Correo de contacto para
+        asuntos de datos, que será público en la ficha de Google Play.</span></li>
+      <li><span class="quien">Legal</span><span>Plazo comprometido de respuesta
+        a las solicitudes del apartado 08.</span></li>
+      <li><span class="quien">TI</span><span>Dirección web definitiva donde se
+        publica esta página, para declararla en Google Play y en la
+        aplicación.</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Borrador redactado por el Departamento de TI · Sofratesa</span>
+    <span>Aplicación IRIS · com.sofratesa.iris</span>
+  </footer>
+
+</div>
+</body>
+</html>
