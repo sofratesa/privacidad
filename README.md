@@ -1,52 +1,67 @@
-# Política de privacidad de IRIS
+# Políticas de privacidad · Sofratesa
 
-Página pública con la política de privacidad de la aplicación móvil IRIS
-(`com.sofratesa.iris`). Existe porque Google Play exige una política publicada
+Páginas públicas con las políticas de privacidad de las aplicaciones de
+Sofratesa. Existen porque Google Play y App Store exigen una política publicada
 en una dirección web accesible sin iniciar sesión, y esa dirección se declara
-tanto en la consola de Play como dentro de la aplicación.
+en la ficha de cada aplicación.
 
-Es un solo archivo, `index.html`, sin dependencias más allá de la tipografía
-Inter Tight que carga de Google Fonts. La paleta y la tipografía son las de
-`iris_flutter/lib/core/design/editorial_tokens.dart`, para que el documento se
-lea como parte de la aplicación.
+## Cómo está organizado
+
+Un repositorio, una carpeta por aplicación. Un dominio de GitHub Pages solo
+puede apuntar a **un** sitio, así que todas las políticas viven aquí y se
+distinguen por la ruta:
+
+```
+/                → índice con todas las políticas
+/iris/           → IRIS (com.sofratesa.iris), mesa de ayuda de TI
+```
+
+Para añadir otra aplicación —Tiamat, por ejemplo— se crea `tiamat/index.html`
+y se añade su entrada al índice de la portada. Queda publicada en `/tiamat/`
+sin tocar nada más.
+
+Cada política es un único archivo HTML sin dependencias, salvo la tipografía
+Inter Tight que carga de Google Fonts. La paleta y la tipografía son las del
+sistema editorial de la propia aplicación
+(`iris_flutter/lib/core/design/editorial_tokens.dart`), para que el documento
+se lea como parte de ella.
 
 ## Estado: BORRADOR
 
-El documento **no es definitivo**. Lo resaltado en ámbar son decisiones que
-corresponden a la dirección o al área legal de Sofratesa:
+Ninguno de los documentos es definitivo. Lo resaltado en ámbar son decisiones
+que corresponden a la dirección o al área legal de Sofratesa:
 
 - Razón social y domicilio del responsable del tratamiento.
 - Correo de contacto para asuntos de datos personales.
-- Plazos de conservación de los tickets, de las imágenes adjuntas y de los
-  registros técnicos.
+- Plazos de conservación de los datos.
 - Base legal del tratamiento.
 - Plazo de respuesta a las solicitudes de acceso, rectificación o eliminación.
 
-Mientras siga siendo un borrador, `index.html` lleva una etiqueta
-`<meta name="robots" content="noindex">`. **Quítala al publicar la versión
-final**, junto con el aviso de borrador y el apartado 13 («Qué falta por
-decidir»), que es para uso interno.
+Mientras sigan siendo borradores, las páginas llevan
+`<meta name="robots" content="noindex">`. **Quitarlo al publicar la versión
+final**, junto con el aviso de borrador y el apartado «Qué falta por decidir»,
+que es para uso interno.
 
-## Cómo publicarlo
+## Dominio
 
-Con el repositorio ya creado y el contenido subido:
+Hoy se sirve en `sofratesa.github.io/privacidad/`.
 
-1. En GitHub, entra en **Settings → Pages**.
-2. En *Source* elige **Deploy from a branch**, rama `main`, carpeta `/ (root)`.
-3. Guarda. En un minuto la página queda en la URL que muestra esa misma
-   pantalla.
+Para pasarlo a `privacidad.sofratesa.com` hace falta un registro DNS en
+SiteGround, que es quien gestiona el dominio:
 
-Ten en cuenta que **GitHub Pages sirve el contenido públicamente** aunque el
-repositorio fuese privado (para servir Pages desde un repositorio privado hace
-falta un plan de pago). Cualquiera con la dirección puede leer la página.
+| Tipo | Nombre | Valor |
+|---|---|---|
+| CNAME | `privacidad` | `sofratesa.github.io.` |
 
-## Dónde se declara la dirección
+Cuando ese registro resuelva, se configura el dominio en *Settings → Pages* del
+repositorio y GitHub emite el certificado HTTPS automáticamente. El dominio ya
+está verificado en la organización (registro TXT
+`_github-pages-challenge-sofratesa`).
 
-Cuando la URL sea definitiva hay que ponerla en dos sitios:
+## Dónde se declara cada dirección
+
+Cuando una política sea definitiva, su URL va en dos sitios:
 
 1. **Play Console** → Política y programas → Contenido de la app → política de
    privacidad.
-2. **La aplicación**, en la pantalla de ajustes, si se añade el enlace.
-
-Si la política se traslada más adelante a la web corporativa, hay que
-actualizar los dos.
+2. **La propia aplicación**, si se añade el enlace en ajustes.
