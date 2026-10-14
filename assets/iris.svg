@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Marca de IRIS: tres arcos anidados estilizados.
+
+  Arcoíris y puente: Iris es la mensajera de los dioses y la personificación del
+  arcoíris, y el arco es lo que une las dos orillas — quien pide y quien resuelve.
+
+  Ojo al usarla: `currentColor` deja que herede el color del contexto, así que
+  sirve igual sobre papel que sobre tinta. Para los iconos de aplicación se usa
+  al revés —trazo claro sobre el azul de acento—, que es lo que genera
+  `tool/generar_iconos.py`.
+
+  Trazo estilizado y hueco armónico: los tres arcos guardan una progresión
+  elegante y equilibrada —12 / 16 / 20— donde el arco interior mantiene el mayor
+  peso visual, y los huecos constantes de 12 px aportan máxima legibilidad,
+  distinción y definición en cualquier tamaño de pantalla.
+
+  Los radios (98 / 72 / 42) salen de mantener constante el hueco de 12 entre bordes de trazo:
+
+    R1 = 98,  w1 = 12  -> borde exterior = 104, borde interior = 92
+    R2 = 92 - 12 - 8  = 72, w2 = 16  -> borde exterior = 80,  borde interior = 64
+    R3 = 64 - 12 - 10 = 42, w3 = 20  -> borde exterior = 52,  borde interior = 32
+
+  Puntas a escuadra (`butt`) y no redondeadas: así los tres arcos terminan a ras
+  del suelo, en la misma línea de apoyo (y = 0).
+
+  A 16 px la marca se reduce a un solo arco: los tres se empastan.
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="-105 -105 210 105"
+  fill="none"
+  stroke="#1f3a5f"
+  stroke-linecap="butt"
+  role="img"
+  aria-label="Iris"
+>
+  <path d="M-98 0 A98 98 0 0 1 98 0" stroke-width="12" />
+  <path d="M-72 0 A72 72 0 0 1 72 0" stroke-width="16" />
+  <path d="M-42 0 A42 42 0 0 1 42 0" stroke-width="20" />
+</svg>

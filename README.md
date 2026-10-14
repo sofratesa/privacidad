@@ -1,67 +1,41 @@
-# Políticas de privacidad · Sofratesa
+# Aplicaciones SOFRATESA
 
-Páginas públicas con las políticas de privacidad de las aplicaciones de
-Sofratesa. Existen porque Google Play y App Store exigen una política publicada
-en una dirección web accesible sin iniciar sesión, y esa dirección se declara
-en la ficha de cada aplicación.
+Hub público de aplicaciones, servido en https://sofratesa.github.io/privacidad/ con GitHub Pages.
 
-## Cómo está organizado
+## Rutas
 
-Un repositorio, una carpeta por aplicación. Un dominio de GitHub Pages solo
-puede apuntar a **un** sitio, así que todas las políticas viven aquí y se
-distinguen por la ruta:
+| Ruta | Contenido |
+| --- | --- |
+| `/` | Catálogo de aplicaciones IRIS y Cronos |
+| `/aplicaciones/iris/` | Ficha de IRIS |
+| `/aplicaciones/cronos/` | Ficha de Cronos |
+| `/iris/` | Política de IRIS existente, en borrador |
+| `/cronos/` | Privacidad de Cronos, en borrador |
 
+La ruta `/iris/` se conserva para los enlaces que ya la usan. Las fichas son públicas; el uso de cada aplicación requiere autorización de SOFRATESA. No se anuncian enlaces de descarga hasta confirmar las direcciones públicas.
+
+## Diseño y ejecución
+
+HTML y CSS, sin compilación ni dependencias JavaScript. La portada y las páginas nuevas usan Nunito Sans de Google Fonts, con tipografía del sistema como alternativa sin red. Los logotipos se sirven localmente. La política existente de IRIS conserva Inter Tight y su contenido.
+
+La identidad se basa en el manual de SOFRATESA proporcionado: colores corporativos, logotipo y tipografía de comunicación. Las decisiones están en `design-system/SOFRATESA.md`; se aplicó la skill UI/UX Pro Max 2.13.0.
+
+Para previsualizar desde la raíz del repositorio:
+
+```sh
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
-/                → índice con todas las políticas
-/iris/           → IRIS (com.sofratesa.iris), mesa de ayuda de TI
-```
 
-Para añadir otra aplicación —Tiamat, por ejemplo— se crea `tiamat/index.html`
-y se añade su entrada al índice de la portada. Queda publicada en `/tiamat/`
-sin tocar nada más.
+Abrir http://127.0.0.1:8080/. En GitHub Pages, publicar la raíz de la rama `master`, como en la configuración existente. Los enlaces relativos también funcionan bajo `/privacidad/`.
 
-Cada política es un único archivo HTML sin dependencias, salvo la tipografía
-Inter Tight que carga de Google Fonts. La paleta y la tipografía son las del
-sistema editorial de la propia aplicación
-(`iris_flutter/lib/core/design/editorial_tokens.dart`), para que el documento
-se lea como parte de ella.
+## Privacidad: borradores
 
-## Estado: BORRADOR
+Los documentos de privacidad no son políticas vigentes. IRIS conserva sus datos pendientes y Cronos tiene un borrador basado en su documentación técnica, con revisión técnica y legal pendiente. Ambos documentos llevan `noindex`.
 
-Ninguno de los documentos es definitivo. Lo resaltado en ámbar son decisiones
-que corresponden a la dirección o al área legal de Sofratesa:
+Antes de aprobarlos se deben confirmar responsable y domicilio, contacto, inventario de datos, fundamento del tratamiento, proveedores y alojamiento, conservación y eliminación, gestión de solicitudes y fecha de vigencia. El formulario de Seguridad de los datos debe validarse con la versión real de cada app.
 
-- Razón social y domicilio del responsable del tratamiento.
-- Correo de contacto para asuntos de datos personales.
-- Plazos de conservación de los datos.
-- Base legal del tratamiento.
-- Plazo de respuesta a las solicitudes de acceso, rectificación o eliminación.
+Al aprobar una política, actualizar su contenido y fecha, retirar el aviso de borrador y `noindex`, y actualizar el estado de la portada y su ficha. No retirar estos avisos solo por desplegar el diseño.
 
-Mientras sigan siendo borradores, las páginas llevan
-`<meta name="robots" content="noindex">`. **Quitarlo al publicar la versión
-final**, junto con el aviso de borrador y el apartado «Qué falta por decidir»,
-que es para uso interno.
+## Añadir una aplicación
 
-## Dominio
-
-Hoy se sirve en `sofratesa.github.io/privacidad/`.
-
-Para pasarlo a `privacidad.sofratesa.com` hace falta un registro DNS en
-SiteGround, que es quien gestiona el dominio:
-
-| Tipo | Nombre | Valor |
-|---|---|---|
-| CNAME | `privacidad` | `sofratesa.github.io.` |
-
-Cuando ese registro resuelva, se configura el dominio en *Settings → Pages* del
-repositorio y GitHub emite el certificado HTTPS automáticamente. El dominio ya
-está verificado en la organización (registro TXT
-`_github-pages-challenge-sofratesa`).
-
-## Dónde se declara cada dirección
-
-Cuando una política sea definitiva, su URL va en dos sitios:
-
-1. **Play Console** → Política y programas → Contenido de la app → política de
-   privacidad.
-2. **La propia aplicación**, si se añade el enlace en ajustes.
+Crear su ficha en `aplicaciones/<nombre>/index.html`, su documento en `<nombre>/index.html` y su tarjeta en la portada. Reutilizar `assets/site.css`, mantener los enlaces relativos y dar un nombre accesible a cada enlace. Añadir acceso o descarga solo con una URL pública confirmada.

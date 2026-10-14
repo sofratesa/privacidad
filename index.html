@@ -1,78 +1,201 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<meta name="description" content="Políticas de privacidad de las aplicaciones de Sofratesa.">
-<meta name="robots" content="noindex">
-<title>Políticas de privacidad · Sofratesa</title>
-<style>
-  /* Reset mínimo: el anfitrión de artifacts lo aportaba, aquí no. */
-  html { -webkit-text-size-adjust: 100%; }
-  img { max-width: 100%; }
-  [hidden] { display: none !important; }
-</style>
-<style>
-  html { -webkit-text-size-adjust: 100%; }
-  .indice { list-style: none; padding: 0; margin-top: var(--s7); }
-  .indice li {
-    max-width: none; margin: 0;
-    border-top: var(--hairline) solid var(--rule);
-  }
-  .indice li:last-child { border-bottom: var(--hairline) solid var(--rule); }
-  .indice a {
-    display: flex; flex-wrap: wrap; align-items: baseline;
-    gap: var(--s2) var(--s4);
-    padding: var(--s5) 0;
-    text-decoration: none; color: inherit;
-  }
-  .indice a:hover .app { color: var(--accent); }
-  .app { font-size: 19px; font-weight: 600; letter-spacing: -.015em; }
-  .paquete {
-    font-size: 12.5px; color: var(--ink-faint);
-    font-variant-numeric: tabular-nums;
-  }
-  .flecha { margin-left: auto; color: var(--accent); font-weight: 600; }
-</style>
-</head>
-<body>
-<div class="envoltura">
-
-  <header class="cabecera">
-    <div class="eyebrow">Sofratesa</div>
-    <h1>Políticas de privacidad</h1>
-    <p class="entradilla">
-      Cómo trata los datos personales cada una de las aplicaciones de Sofratesa.
-      Cada documento describe su propia aplicación: qué datos recoge, para qué,
-      con quién los comparte y qué puede solicitar quien la usa.
-    </p>
-  </header>
-
-  <div class="borrador">
-    <strong>Borrador · pendiente de revisión legal</strong>
-    <p>
-      Los documentos publicados aquí son propuestas redactadas por el
-      Departamento de TI. No son textos vigentes hasta que la dirección y el
-      área legal los completen y aprueben.
-    </p>
-  </div>
-
-  <ul class="indice">
-    <li>
-      <a href="iris/">
-        <span class="app">IRIS</span>
-        <span class="paquete">com.sofratesa.iris · mesa de ayuda de TI</span>
-        <span class="flecha">Ver política →</span>
-      </a>
-    </li>
-  </ul>
-
-  <footer>
-    <span>Departamento de TI · Sofratesa</span>
-    <span>privacidad.sofratesa.com</span>
-  </footer>
-
-</div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Conoce las aplicaciones de SOFRATESA: IRIS para soporte de TI y Cronos para gestionar el tiempo y los proyectos. Información y privacidad en un solo lugar."
+    />
+    <meta name="theme-color" content="#001D61" />
+    <title>Aplicaciones · SOFRATESA</title>
+    <link rel="icon" href="./assets/sofratesa-icon.png" />
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="SOFRATESA · Inicio"
+          ><img src="./assets/sofratesa-logo.png" alt="SOFRATESA" width="304" height="58"
+        /></a>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="./#aplicaciones" aria-current="page">Aplicaciones</a
+          ><a href="./#privacidad">Privacidad</a
+          ><a class="corporate" href="https://www.sofratesa.com/"
+            >Sitio corporativo <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Tecnología SOFRATESA</p>
+            <h1 id="hero-title">Conectamos equipos.<br /><span>Impulsamos el trabajo.</span></h1>
+            <p class="intro">
+              Un punto de encuentro para nuestras aplicaciones. Descubre herramientas que
+              simplifican el soporte y la gestión del tiempo, y conoce cómo tratan tus datos.
+            </p>
+            <a class="button" href="#aplicaciones"
+              >Explorar aplicaciones <span aria-hidden="true">↓</span></a
+            >
+            <p class="hero-note">Información pública · Uso con cuenta autorizada</p>
+          </div>
+          <div class="ecosystem" aria-label="IRIS y Cronos, aplicaciones de SOFRATESA">
+            <div class="ecosystem-top">
+              <span>Nuestro ecosistema digital</span
+              ><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+            <div class="ecosystem-apps">
+              <div class="ecosystem-app">
+                <div class="app-symbol iris">
+                  <img src="assets/iris.svg" alt="" width="54" height="34" />
+                </div>
+                <p>IRIS</p>
+              </div>
+              <span class="connector" aria-hidden="true"></span>
+              <div class="ecosystem-app">
+                <div class="app-symbol">
+                  <img src="assets/cronos.svg" alt="" width="54" height="54" />
+                </div>
+                <p>CRONOS</p>
+              </div>
+            </div>
+            <div class="ecosystem-bottom">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M12 3 4 6v6c0 4 4 7 8 9 4-2 8-5 8-9V6l-8-3Z" />
+                <path d="m8 12 3 3 5-6" />
+              </svg>
+              <div>
+                <strong>Herramientas para nuestro equipo</strong
+                ><span>Soporte, organización y colaboración.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section container" id="aplicaciones" aria-labelledby="apps-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Nuestras aplicaciones</p>
+            <h2 id="apps-title">Una herramienta para cada tarea.</h2>
+          </div>
+          <p>Explora el catálogo de SOFRATESA</p>
+        </div>
+        <div class="app-grid">
+          <article class="app-card">
+            <div class="card-art iris">
+              <div class="app-symbol iris">
+                <img src="assets/iris.svg" alt="" width="54" height="54" />
+              </div>
+              <span class="art-label">Conecta.<br />Reporta. Resuelve.</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>IRIS</h3>
+                <span class="tag">Soporte de TI</span>
+              </div>
+              <p>
+                Tu punto de contacto con TI. Reporta incidencias, conversa con el equipo de soporte
+                y sigue la atención de cada solicitud.
+              </p>
+              <ul class="features" aria-label="Funciones de IRIS">
+                <li>Tickets</li>
+                <li>Seguimiento</li>
+                <li>Notificaciones</li>
+              </ul>
+              <div class="card-links">
+                <a class="button" href="aplicaciones/iris/"
+                  >Conocer IRIS <span aria-hidden="true">→</span></a
+                ><a class="text-link" href="iris/"
+                  >Privacidad <span aria-hidden="true">↗</span
+                  ><span class="sr-only"> de IRIS (borrador)</span></a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="app-card">
+            <div class="card-art cronos">
+              <div class="app-symbol cronos">
+                <img src="assets/cronos.svg" alt="" width="54" height="54" />
+              </div>
+              <span class="art-label">Organiza.<br />Registra. Avanza.</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>Cronos</h3>
+                <span class="tag">Tiempo y proyectos</span>
+              </div>
+              <p>
+                El tiempo de tu equipo, con contexto. Organiza proyectos y entregables, registra la
+                dedicación y consulta el avance del trabajo.
+              </p>
+              <ul class="features" aria-label="Funciones de Cronos">
+                <li>Proyectos</li>
+                <li>Registro de horas</li>
+                <li>Informes</li>
+              </ul>
+              <div class="card-links">
+                <a class="button" href="aplicaciones/cronos/"
+                  >Conocer Cronos <span aria-hidden="true">→</span></a
+                ><a class="text-link" href="cronos/"
+                  >Privacidad <span aria-hidden="true">↗</span
+                  ><span class="sr-only"> de Cronos (borrador)</span></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <aside class="privacy-strip" id="privacidad" aria-labelledby="privacy-title">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <rect x="5" y="10" width="14" height="11" rx="2" />
+            <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" />
+          </svg>
+          <div>
+            <h3 id="privacy-title">Información de privacidad, a tu alcance.</h3>
+            <p>
+              Cada aplicación tiene su propio documento. Los textos de IRIS y Cronos son borradores
+              pendientes de revisión y aprobación; puedes consultarlos desde sus fichas.
+            </p>
+          </div>
+        </aside>
+      </section>
+      <section class="about" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <h2 id="about-title">Construyendo un mundo mejor.<br />También desde lo digital.</h2>
+          <p>
+            La tecnología forma parte de nuestra manera de trabajar. Estas herramientas acompañan a
+            los equipos de SOFRATESA en sus tareas diarias, con información clara y un acceso
+            centralizado.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p><strong>SOFRATESA</strong> · Departamento de Tecnología de la Información</p>
+        <a href="https://www.sofratesa.com/"
+          >Conoce SOFRATESA <span aria-hidden="true">&nbsp;↗</span></a
+        >
+      </div>
+    </footer>
+  </body>
 </html>
