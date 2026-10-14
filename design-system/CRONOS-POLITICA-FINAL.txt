@@ -1,0 +1,55 @@
+POLÍTICA DE PRIVACIDAD DE SOFRATESA CRONOS
+
+Última actualización: 13 de octubre de 2026
+
+Sofratesa Cronos («Cronos») es una aplicación de uso interno de Sofratesa para registrar horas de trabajo, llevar proyectos y organizar equipos. Esta política explica qué datos trata la aplicación, para qué y con quién se comparten.
+
+1. QUIÉN ES EL RESPONSABLE
+
+Sofratesa
+
+Ave. Aquilino de la Guardia y Calle 47, Edificio Ocean Business Plaza, Marbella, Panamá
+
+Correo: support@sofratesa.com
+
+Web: https://sofratesa.com
+
+2. QUÉ DATOS TRATAMOS
+
+Datos de la cuenta: nombre, correo electrónico, contraseña (el servidor solo guarda una versión cifrada, nunca la contraseña en claro), rol, función o puesto, zona horaria y la configuración de la verificación en dos pasos. Si la organización lo habilita, también el vínculo con la cuenta Microsoft del trabajo para iniciar sesión con ella.
+
+Datos de trabajo: horas registradas (fecha, proyecto, tarea y notas), proyectos y entregables, asignaciones, organigrama, aprobaciones y su historial y, para los roles autorizados, costos y tarifas.
+
+Datos que se quedan en el dispositivo: la sesión se guarda en el almacenamiento seguro del sistema operativo. Si activas el desbloqueo con huella, rostro o PIN, la comprobación la hace el propio sistema (por ejemplo, Windows Hello): Cronos no recibe ni guarda datos biométricos. Los recordatorios de horas son notificaciones que genera el propio dispositivo. Los informes y organigramas que exportas se guardan solo donde tú eliges.
+
+3. PARA QUÉ LOS USAMOS
+
+Para identificarte y mantener tu sesión, registrar y aprobar horas, gestionar proyectos y equipos, calcular costos y elaborar informes internos, y enviarte avisos por correo relacionados con tu cuenta (por ejemplo, el restablecimiento de la contraseña).
+
+No usamos los datos para publicidad ni para crear perfiles comerciales, y la aplicación no incluye herramientas de analítica ni de seguimiento de terceros.
+
+4. CON QUIÉN SE COMPARTEN
+
+Los datos se guardan en servidores bajo el control de Sofratesa. Dentro de la empresa, cada persona ve solo lo que su rol le permite.
+
+No vendemos ni cedemos datos a terceros. Solo intervienen el proveedor de correo electrónico que entrega los avisos de la aplicación y, si usas el inicio de sesión con Microsoft, Microsoft como proveedor de identidad. Podemos comunicar datos a una autoridad cuando la ley lo exija.
+
+5. CUÁNTO TIEMPO LOS CONSERVAMOS
+
+Mientras la cuenta esté activa y, después, el tiempo que exijan las obligaciones legales y contables de la empresa. Pasado ese plazo se eliminan o se anonimizan.
+
+6. SEGURIDAD
+
+Las comunicaciones entre la aplicación y el servidor van cifradas (HTTPS). Las contraseñas se guardan cifradas, el acceso a los datos depende del rol de cada usuario y la cuenta admite verificación en dos pasos.
+
+7. TUS DERECHOS
+
+Puedes pedir acceso a tus datos, que se corrijan o que se eliminen, u oponerte a su tratamiento, escribiendo a support@sofratesa.com. Responderemos según la Ley 81 de 2019 de Panamá sobre protección de datos personales y las demás normas aplicables.
+
+8. MENORES
+
+Cronos es una herramienta de trabajo y no está dirigida a menores de edad.
+
+9. CAMBIOS
+
+Si cambia esta política, publicaremos la nueva versión con su fecha de actualización.

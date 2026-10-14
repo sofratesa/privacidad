@@ -27,3 +27,14 @@ La copia de partida corresponde a `master` del repositorio local `privacidad-iri
 - HTML y CSS analizados y formateados con Prettier; `git diff --check` sin errores.
 - Los textos nuevos usan los pares de colores ya comprobados en el hub. El índice fijo se desactiva tanto en móvil como en ventanas bajas.
 - Se mantiene el límite de comprobación visual: este entorno no permite arrancar el navegador ni abrir un servidor local. No se ejecutó una validación visual en navegador ni una prueba contra los servicios de producción.
+
+## Ampliación: política final de Cronos
+
+- Texto final proporcionado por el usuario incorporado en `/cronos/`, conservando sus nueve apartados y la fecha del 13 de octubre de 2026.
+- Comparado el texto de todos los párrafos contra `CRONOS-POLITICA-FINAL.txt`, normalizando únicamente espacios y saltos de línea: sin cambios de redacción.
+- Diseño compartido con IRIS, incluido índice, cabecera, pie, contacto y adaptación a móvil; icono PNG del usuario con proporción cuadrada.
+- Eliminados los avisos de borrador del documento, la ficha y el hub, y retirada la etiqueta `noindex` de Cronos.
+- Verificadas cinco páginas y 85 enlaces/recursos locales, incluidas las nueve anclas del documento.
+- Confirmado que la página de privacidad de IRIS permanece idéntica al commit anterior.
+- Sintaxis y formato HTML/CSS correctos; `git diff --check` sin errores. Se mantiene el límite de verificación visual del entorno.
+- No se realizó una nueva revisión técnica o legal de Cronos: se publicó el texto final recibido como contenido de la página.

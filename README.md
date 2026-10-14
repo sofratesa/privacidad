@@ -10,7 +10,7 @@ Hub público de aplicaciones, servido en https://sofratesa.github.io/privacidad/
 | `/aplicaciones/iris/` | Ficha de IRIS |
 | `/aplicaciones/cronos/` | Ficha de Cronos |
 | `/iris/` | Política de privacidad de IRIS basada en la revisión del código |
-| `/cronos/` | Privacidad de Cronos, en borrador |
+| `/cronos/` | Política de privacidad final de Cronos |
 
 La ruta `/iris/` se conserva para los enlaces que ya la usan. Las fichas son públicas; el uso de cada aplicación requiere autorización de SOFRATESA. No se anuncian enlaces de descarga hasta confirmar las direcciones públicas.
 
@@ -34,7 +34,7 @@ IRIS tiene una política descriptiva basada en la revisión del cliente Flutter 
 
 Las comprobaciones y límites de la revisión están en `design-system/IRIS-PRIVACIDAD-EVIDENCIA.md`. El texto describe lo implementado en las copias locales del código; no certifica configuración de producción, cumplimiento normativo o coincidencia con el binario distribuido. Se actualiza cuando cambian las funciones o el tratamiento de datos.
 
-Cronos conserva su documento y su estado de borrador, con `noindex`, por instrucción del usuario. No se revisó ni modificó su política.
+Cronos publica el texto final aportado por el usuario, con fecha de actualización del 13 de octubre de 2026. Se conservaron sus nueve apartados y su redacción; se retiraron los avisos de borrador y `noindex` de la página, y se actualizó su estado en la ficha y el hub. La copia del texto está en `design-system/CRONOS-POLITICA-FINAL.txt`. Esta actualización es de contenido y diseño; no incorpora una auditoría del código de Cronos.
 
 ## Añadir una aplicación
 
