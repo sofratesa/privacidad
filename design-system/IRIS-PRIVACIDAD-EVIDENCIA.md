@@ -66,7 +66,7 @@ La revisión utiliza los archivos actuales, incluidos cambios locales sin public
 ## Decisiones del texto
 
 - Identificador Android corregido a `com.sofratesa.iris_app`, según el archivo Gradle; el documento anterior usaba `com.sofratesa.iris`. La URL `/iris/` permanece estable.
-- `support@sofratesa.com` fue aportado y confirmado por el usuario como canal de consultas sobre datos personales.
+- `contactos@sofratesa.com` fue aportado y confirmado por el usuario como canal de consultas sobre datos personales.
 - SOFRATESA se identifica como operador de la aplicación. No se inventó una razón social registrada, domicilio legal o base jurídica aplicable a todos los países.
 - Se describe la baja lógica de cuentas, tickets y mensajes. No se promete borrado inmediato, anónimo o automático a una fecha ficticia.
 - Cloudinary y R2 se describen como alternativas configurables; no se afirma que todas estén activas. TypeSafe se explica como integración opcional.

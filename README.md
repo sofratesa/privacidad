@@ -30,7 +30,7 @@ Abrir http://127.0.0.1:8080/. En GitHub Pages, publicar la raíz de la rama `mas
 
 ## Privacidad
 
-IRIS tiene una política descriptiva basada en la revisión del cliente Flutter y sus servicios de soporte, identidad, notificaciones y mantenimiento. El contacto `support@sofratesa.com` fue confirmado por el responsable de la tarea. No se inventan razón social registrada, país de alojamiento, plazos de borrado ni garantías generales de privacidad de los adjuntos.
+IRIS tiene una política descriptiva basada en la revisión del cliente Flutter y sus servicios de soporte, identidad, notificaciones y mantenimiento. El contacto `contactos@sofratesa.com` fue confirmado por el responsable de la tarea. No se inventan razón social registrada, país de alojamiento, plazos de borrado ni garantías generales de privacidad de los adjuntos.
 
 Las comprobaciones y límites de la revisión están en `design-system/IRIS-PRIVACIDAD-EVIDENCIA.md`. El texto describe lo implementado en las copias locales del código; no certifica configuración de producción, cumplimiento normativo o coincidencia con el binario distribuido. Se actualiza cuando cambian las funciones o el tratamiento de datos.
 

@@ -22,7 +22,7 @@ La copia de partida corresponde a `master` del repositorio local `privacidad-iri
 - Política de IRIS reescrita tras revisar los flujos de datos de cliente, soporte, identidad, notificaciones, gateway y mantenimiento. Fuentes y límites: `IRIS-PRIVACIDAD-EVIDENCIA.md`.
 - Diseño unificado con el hub; navegación, tipografía, colores y hoja de estilos compartidos. Índice con doce secciones y contacto confirmado.
 - Verificadas las cinco páginas del sitio y 73 enlaces/recursos locales, incluidas anclas y rutas de GitHub Pages.
-- Verificados contacto `support@sofratesa.com`, identificador `com.sofratesa.iris_app`, h1 único, español, IDs únicos y atributos alt.
+- Verificados contacto `contactos@sofratesa.com`, identificador `com.sofratesa.iris_app`, h1 único, español, IDs únicos y atributos alt.
 - IRIS no lleva aviso de borrador ni `noindex`. Cronos conserva `noindex`; sus dos páginas coinciden exactamente con las del commit anterior.
 - HTML y CSS analizados y formateados con Prettier; `git diff --check` sin errores.
 - Los textos nuevos usan los pares de colores ya comprobados en el hub. El índice fijo se desactiva tanto en móvil como en ventanas bajas.

@@ -10,7 +10,7 @@ Sofratesa
 
 Ave. Aquilino de la Guardia y Calle 47, Edificio Ocean Business Plaza, Marbella, Panamá
 
-Correo: support@sofratesa.com
+Correo: contactos@sofratesa.com
 
 Web: https://sofratesa.com
 
@@ -44,7 +44,7 @@ Las comunicaciones entre la aplicación y el servidor van cifradas (HTTPS). Las 
 
 7. TUS DERECHOS
 
-Puedes pedir acceso a tus datos, que se corrijan o que se eliminen, u oponerte a su tratamiento, escribiendo a support@sofratesa.com. Responderemos según la Ley 81 de 2019 de Panamá sobre protección de datos personales y las demás normas aplicables.
+Puedes pedir acceso a tus datos, que se corrijan o que se eliminen, u oponerte a su tratamiento, escribiendo a contactos@sofratesa.com. Responderemos según la Ley 81 de 2019 de Panamá sobre protección de datos personales y las demás normas aplicables.
 
 8. MENORES
 
