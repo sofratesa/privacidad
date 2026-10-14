@@ -9,14 +9,14 @@ Hub público de aplicaciones, servido en https://sofratesa.github.io/privacidad/
 | `/` | Catálogo de aplicaciones IRIS y Cronos |
 | `/aplicaciones/iris/` | Ficha de IRIS |
 | `/aplicaciones/cronos/` | Ficha de Cronos |
-| `/iris/` | Política de IRIS existente, en borrador |
+| `/iris/` | Política de privacidad de IRIS basada en la revisión del código |
 | `/cronos/` | Privacidad de Cronos, en borrador |
 
 La ruta `/iris/` se conserva para los enlaces que ya la usan. Las fichas son públicas; el uso de cada aplicación requiere autorización de SOFRATESA. No se anuncian enlaces de descarga hasta confirmar las direcciones públicas.
 
 ## Diseño y ejecución
 
-HTML y CSS, sin compilación ni dependencias JavaScript. La portada y las páginas nuevas usan Nunito Sans de Google Fonts, con tipografía del sistema como alternativa sin red. Los logotipos se sirven localmente. La política existente de IRIS conserva Inter Tight y su contenido.
+HTML y CSS, sin compilación ni dependencias JavaScript. La portada y las páginas nuevas usan Nunito Sans de Google Fonts, con tipografía del sistema como alternativa sin red. Los logotipos se sirven localmente. La política de IRIS utiliza la misma identidad y navegación del hub, con un índice de secciones.
 
 La identidad se basa en el manual de SOFRATESA proporcionado: colores corporativos, logotipo y tipografía de comunicación. Las decisiones están en `design-system/SOFRATESA.md`; se aplicó la skill UI/UX Pro Max 2.13.0.
 
@@ -28,13 +28,13 @@ python3 -m http.server 8080 --bind 127.0.0.1
 
 Abrir http://127.0.0.1:8080/. En GitHub Pages, publicar la raíz de la rama `master`, como en la configuración existente. Los enlaces relativos también funcionan bajo `/privacidad/`.
 
-## Privacidad: borradores
+## Privacidad
 
-Los documentos de privacidad no son políticas vigentes. IRIS conserva sus datos pendientes y Cronos tiene un borrador basado en su documentación técnica, con revisión técnica y legal pendiente. Ambos documentos llevan `noindex`.
+IRIS tiene una política descriptiva basada en la revisión del cliente Flutter y sus servicios de soporte, identidad, notificaciones y mantenimiento. El contacto `support@sofratesa.com` fue confirmado por el responsable de la tarea. No se inventan razón social registrada, país de alojamiento, plazos de borrado ni garantías generales de privacidad de los adjuntos.
 
-Antes de aprobarlos se deben confirmar responsable y domicilio, contacto, inventario de datos, fundamento del tratamiento, proveedores y alojamiento, conservación y eliminación, gestión de solicitudes y fecha de vigencia. El formulario de Seguridad de los datos debe validarse con la versión real de cada app.
+Las comprobaciones y límites de la revisión están en `design-system/IRIS-PRIVACIDAD-EVIDENCIA.md`. El texto describe lo implementado en las copias locales del código; no certifica configuración de producción, cumplimiento normativo o coincidencia con el binario distribuido. Se actualiza cuando cambian las funciones o el tratamiento de datos.
 
-Al aprobar una política, actualizar su contenido y fecha, retirar el aviso de borrador y `noindex`, y actualizar el estado de la portada y su ficha. No retirar estos avisos solo por desplegar el diseño.
+Cronos conserva su documento y su estado de borrador, con `noindex`, por instrucción del usuario. No se revisó ni modificó su política.
 
 ## Añadir una aplicación
 

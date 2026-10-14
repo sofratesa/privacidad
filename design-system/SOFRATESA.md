@@ -17,3 +17,7 @@ Se aplicó UI/UX Pro Max 2.13.0, consulta `enterprise application directory mini
 
 IRIS: texto de la política existente. Cronos: README, ADR-004, ADR-008, ADR-009, ADR-018, ADR-019 y reportes de septiembre de 2026 del repositorio Documentacion-proyectos.
 La privacidad de Cronos se marca como borrador pendiente de validación; no se inventan fundamento legal, contacto, proveedores ni conservación.
+
+## Privacidad de IRIS · 14 de octubre de 2026
+
+IRIS usa ahora `assets/site.css`, la cabecera y el pie del hub, Nunito Sans, una introducción con ficha de contacto y un índice de doce secciones. En móvil el índice pasa al flujo normal; en ventanas bajas no queda fijo. El texto se reescribió a partir de la revisión por flujos de datos del cliente y sus servicios. El contacto confirmado es `support@sofratesa.com`. Las fuentes y límites están en `IRIS-PRIVACIDAD-EVIDENCIA.md`. Cronos conserva su estado y su contenido.
